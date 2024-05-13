@@ -62,32 +62,7 @@ import { createSpinner } from 'nanospinner';
 // await pause(4000);
 // spinner1.success()
 
-//bewegen
 
-// import {setTimeout as wait} from 'timers/promises';
-// console.clear();
-// console.log('😍');
-// await pause(100);
-// console.clear();
-// console.log(' 😍');
-// await pause(100);
-// console.clear();
-// console.log('  😍');
-// await pause(100);
-// console.clear();
-// console.log('   😍');
-// await pause(100);
-// console.clear();
-// console.log('    😍');
-// await pause(100);
-// console.clear();
-// console.log('     😍');
-// await pause(100);
-// console.clear();
-// console.log('      😍');
-// await pause(100);
-// console.clear();
-// console.log('       😍');
 
 
 const users = [
@@ -194,47 +169,6 @@ function depositFunds() {
     console.log(chalk.green('√ Deposit successful.'));
     mainMenu();
 }
-
-//-------------------------------------------
-// function depositFunds() {
-
-//     const amount = readlineSync.questionInt('Enter the amount to deposit: ');
-
-//     if (amount.toString().toLowerCase() === 'exit') {
-//         console.log(chalk.yellow('Exiting...'));
-//         process.exit(0); 
-//     }
-
-//     if (amount <= 0) {
-//         console.log(chalk.red('Invalid amount. Deposit not successful.'));
-//         mainMenu();
-//         return;//v-v
-//     }
-//     currentUser.balance += amount;
-//     currentUser.transactions.push({ type: 'Deposit', amount, date: new Date() });
-//     console.log(chalk.green('Deposit successful.'));
-//     mainMenu();
-// }
-
-//-----------------------------------
-
-// function withdrawFunds() {
-//     const amount = readlineSync.questionFloat('Enter the amount to withdraw: '); //mit Float oder Int
-//     if (amount > currentUser.balance) {
-//         console.log(chalk.red('Insufficient funds.'));
-//     } 
-//     if (amount <= 0) {
-//         console.log(chalk.red('Invalid amount. Withdraw not successful.'));
-//         mainMenu();
-//         return;// verbessung vorschlag
-//     }
-//     else {
-//         currentUser.balance -= amount;
-//         currentUser.transactions.push({ type: 'Withdrawal', amount, date: new Date() });
-//         console.log(chalk.green('Withdrawal successful.'));
-//     }
-//     mainMenu();
-// }
 
 
 function withdrawFunds() {
@@ -362,183 +296,16 @@ function withdrawFunds() {
 
 //------------------------------------------------------------------
 
-// function transferMoney() {
-//     console.log("Transfer Money:");
-//     console.log("  __________________________________________________ ");
-//     console.log(" /                                                  \\");
-//     console.log("|   Transfer Money Form                              |");
-//     console.log("|____________________________________________________|");
-//     console.log(`| Recipient Username: [__________________________]   |`);
-//     console.log("|                                                    |");
-//     console.log(`| Purpose of Transfer: [_________________________]   |`);
-//     console.log("|                                                    |");
-//     console.log(`| Amount to Transfer: [${amount}____________________] |`);
-//     console.log("|____________________________________________________|");
-//     console.log("|                                                    |");
-//     console.log("| [Submit]                                           |");
-//     console.log("|____________________________________________________|");
-
-//     const recipientUsername = readlineSync.question('Enter recipient username: ');
-
-//     if (recipientUsername.toLowerCase() === 'exit') {
-//         console.log(chalk.yellow('Exiting...'));
-//         mainMenu(); 
-//         return;
-//     }
-
-//     const recipient = users.find(user => user.username === recipientUsername);
-
-//     if (!recipient) {
-//         console.log(chalk.red('Recipient not found.'));
-//         mainMenu();
-//         return;
-//     }
-
-//     const purpose = readlineSync.question('Enter purpose of transfer: ');
-//     const amountStr = readlineSync.question('Enter the amount to transfer: ');
-
-//     if (amountStr.toLowerCase() === 'exit') {
-//         console.log(chalk.yellow('Exiting...'));
-//         mainMenu()
-//         return;
-//     }
-
-//     const amount = parseFloat(amountStr); 
-
-//     if (isNaN(amount) || amount <= 0) {
-//         console.log(chalk.red('Invalid amount. Transfer not successful.'));
-//         mainMenu();
-//         return;
-//     }
-
-//     if (amount > currentUser.balance) {
-//         console.log(chalk.red('Insufficient funds.'));
-//         mainMenu();
-//         return;
-//     }
-
-//     // Transfer funds
-//     currentUser.balance -= amount;
-//     recipient.balance += amount;
-
-//     // Record transaction
-//     currentUser.transactions.push({ 
-//         type: 'Transfer (out)', 
-//         amount: -amount, 
-//         date: new Date(), 
-//         recipient: recipientUsername, 
-//         purpose: purpose 
-//     });
-
-//     recipient.transactions.push({ 
-//         type: 'Transfer (in)', 
-//         amount: +amount, 
-//         date: new Date(), 
-//         sender: currentUser.username, 
-//         purpose: purpose 
-//     });
-
-//     console.log(chalk.green('Transfer successful.'));
-//     mainMenu();
-// }
-
-
-//-------------------------------------------------------------------
-
-
-// function transferMoney() {
-//     const recipientUsernamePlaceholder = '[__________________________]';
-//     const purposePlaceholder = '[_________________________]';
-//     const amountPlaceholder = `[${amount}____________________]`;
-
-//     const form = `
-// Transfer Money:
-//   __________________________________________________ 
-//  /                                                  \\
-// |   Transfer Money Form                              |
-// |____________________________________________________|
-// | Recipient Username: ${recipientUsernamePlaceholder}   |
-// |                                                    |
-// | Purpose of Transfer: ${purposePlaceholder}   |
-// |                                                    |
-// | Amount to Transfer: ${amountPlaceholder} |
-// |____________________________________________________|
-// |                                                    |
-// | [Submit]                                           |
-// |____________________________________________________|`;
-
-//     console.log(form);
-
-//     const recipientUsername = readlineSync.question('Enter recipient username: ');
-
-//     if (recipientUsername.toLowerCase() === 'exit') {
-//         console.log(chalk.yellow('Exiting...'));
-//         mainMenu(); 
-//         return;
-//     }
-
-//     const recipient = users.find(user => user.username === recipientUsername);
-
-//     if (!recipient) {
-//         console.log(chalk.red('Recipient not found.'));
-//         mainMenu();
-//         return;
-//     }
-
-//     const purpose = readlineSync.question('Enter purpose of transfer: ');
-//     const amountStr = readlineSync.question('Enter the amount to transfer: ');
-
-//     if (amountStr.toLowerCase() === 'exit') {
-//         console.log(chalk.yellow('Exiting...'));
-//         mainMenu()
-//         return;
-//     }
-
-//     const amount = parseFloat(amountStr); 
-
-//     if (isNaN(amount) || amount <= 0) {
-//         console.log(chalk.red('Invalid amount. Transfer not successful.'));
-//         mainMenu();
-//         return;
-//     }
-
-//     if (amount > currentUser.balance) {
-//         console.log(chalk.red('Insufficient funds.'));
-//         mainMenu();
-//         return;
-//     }
-
-//     // Transfer funds
-//     currentUser.balance -= amount;
-//     recipient.balance += amount;
-
-//     // Record transaction
-//     currentUser.transactions.push({ 
-//         type: 'Transfer (out)', 
-//         amount: -amount, 
-//         date: new Date(), 
-//         recipient: recipientUsername, 
-//         purpose: purpose 
-//     });
-
-//     recipient.transactions.push({ 
-//         type: 'Transfer (in)', 
-//         amount: +amount, 
-//         date: new Date(), 
-//         sender: currentUser.username, 
-//         purpose: purpose 
-//     });
-
-//     console.log(chalk.green('Transfer successful.'));
-//     mainMenu();
-// }
-
-
-//-------------------------------------------------------------------
-
 function transferMoney() {
-    const recipientUsernamePlaceholder = '[__________________________]';
-    const purposePlaceholder = '[_________________________]';
+
+    function formatFormField(label, value) {
+        const maxLabelLength = 22; // Max länge for the label
+        const labelWithPadding = label + ':'.padEnd(maxLabelLength - label.length);
+        return `| ${labelWithPadding} ${value.padEnd(47 - maxLabelLength, '_')}   |`;
+    }
+
+    //const recipientUsernamePlaceholder = '[__________________________]';
+    //const purposePlaceholder = '[_________________________]';
 
     const recipientUsername = readlineSync.question('Enter recipient username: ');
 
@@ -562,7 +329,7 @@ function transferMoney() {
     if (amountStr.toLowerCase() === 'exit') {
         console.log(chalk.yellow('Exiting...'));
         mainMenu()
-        return;
+        return;   // wenn es gibt problem, hier!
     }
 
     const amount = parseFloat(amountStr); 
@@ -573,40 +340,71 @@ function transferMoney() {
         return;
     }
 
-    const amountPlaceholder = `[${amount}____________________]`;
+    //----------------------------------------
+    if (amount > currentUser.balance) {
+                console.log(chalk.red('Insufficient funds.'));
+                mainMenu();
+                return;
+            }
+        
+            
+            // Transfer funds
+            currentUser.balance -= amount;
+            recipient.balance += amount;
+        
+            // Record transaction
+            currentUser.transactions.push({ 
+                type: 'Transfer (out)', 
+                amount: -amount, 
+                date: new Date(), 
+                recipient: recipientUsername, 
+                purpose: purpose 
+            });
+        
+            recipient.transactions.push({ 
+                type: 'Transfer (in)', 
+                amount: +amount, 
+                date: new Date(), 
+                sender: currentUser.username, 
+                purpose: purpose 
+            });
+
 
     const form = [`Transfer Money:`, 
                                                                                                                                           
- ` __________________________________________________ `,
-` /                                                  \\  `,
-`|   Transfer Money Form                              |`,
-`|____________________________________________________|`,
-`| Recipient Username: ${recipientUsernamePlaceholder.padEnd(50, '_')}   |`,
-`|                                                    |`,
-`| Purpose of Transfer: ${purposePlaceholder.padEnd(47, '_')}   |`,
-`|                                                    |`,
-`| Amount to Transfer: ${amountPlaceholder.padEnd(48, '_')}   |`,
-`|____________________________________________________|`,
-`|                                                    |`,
-`| [Submit]                                           |`,
-`|____________________________________________________|`];
+    `  __________________________________________________ `,
+   `//                                                  \\  `,
+   `|   Transfer Money Form                              |`,
+   `|____________________________________________________|`,
+    formatFormField('Recipient Username', recipient.username),         
+   `|                                                    |`,
+    formatFormField('Purpose of Transfer', purpose),                  
+   `|                                                    |`,
+    formatFormField('Amount to Transfer', '$' + amount.toFixed(2)),              
+   `|____________________________________________________|`,
+   `|                                                    |`,
+   `| [Submit]                                           |`,
+   `|____________________________________________________|`];
+   
+        
+            console.log(chalk.green('Transfer successful.'));
+            console.log(form)
+            mainMenu();
+        }
+        
+        //----------------------------------------------------------------------
 
-    // return the form
-    return form;
-}
+   // const amountPlaceholder = `[${amount}____________________]`;
 
-
-
-
-//-------------------------------------------------------------------
 
 function viewTransactionHistory() {
-    console.log('\nTransaction History:');
+    console.log(chalk.green('\nTransaction History:'));
     currentUser.transactions.forEach(transaction => {
-        console.log(`${transaction.date} - ${transaction.type}: $${transaction.amount}`);//toLocalString()  oder toString()
+        console.log(`${transaction.date} - ${transaction.type}: $${transaction.amount}`);
+        //toLocalString()  oder toString()
     });
     mainMenu();
 }
 
-// Start the application
+
 login();
