@@ -91,6 +91,23 @@ function login() {
     currentUser = users.find(user => user.username === username && user.pin === pin);
     if (currentUser) {
         console.log(chalk.green(`Welcome, ${currentUser.username}!`));
+        console.log(`
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣤⣶⣿⣿⣷⣤⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⣀⣴⣾⣿⣿⣿⣿⣿⠋⣉⣉⠙⣿⣿⣿⣷⣦⣀⠀⠀⠀⠀⠀
+⠀⠀⠀⢀⣤⣶⣿⣿⣿⣿⣿⣿⣿⣿⣿⠀⣿⣿⠀⣿⣿⣿⣿⣿⣿⣶⣤⡀⠀⠀⠀
+⠀⠀⠀⣤⣤⣤⣤⣤⡄⠀⠀⠀⢀⣠⣿⣿⣤⣤⣄⡀⠀⢠⣤⣤⣤⣤⣤⠀⠀⠀
+⠀⠀⠀⠀⣿⣿⣿⠀⠀⠀⢀⣴⣿⡿⠛⠛⠛⠛⠛⠇⠀⠀⠀⣿⣿⣿⠀⠀⠀⠀
+⠀⠀⠀⠀⣿⣿⣿⠀⠀⠀⣸⣿⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⣿⣿⠀⠀⠀⠀
+⠀⠀⠀⠀⣿⣿⣿⠀⠀⠀⣿⣿⠀⠀⠀⠀⢠⣤⣤⣤⠀⠀⠀⣿⣿⣿⠀⠀⠀⠀
+⠀⠀⠀⠀⣿⣿⣿⠀⠀⠀⢹⣿⣆⠀⠀⠀⠀⠀⢸⣿⠀⠀⠀⣿⣿⣿⠀⠀⠀⠀
+⠀⠀⠀⠀⣿⣿⣿⠀⠀⠀⠀⠻⣿⣷⣤⣤⣤⣤⣾⣿⠀⠀⠀⣿⣿⣿⠀⠀⠀⠀
+⠀⠀⠀⠀⣿⣿⣿⠀⠀⠀⠀⠀⠈⠙⣿⣿⠛⠛⠉⠁⠀⠀⠀⣿⣿⣿⠀⠀⠀⠀
+⠀⠀⠀⠛⠛⠛⠛⠛⠃⠀⠀⠀⠀⠀⣿⣿⠀⠀⠀⠀⠀⠘⠛⠛⠛⠛⠛⠀⠀⠀
+⠀⠀⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠀⠉⠉⠀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⠀⠀
+⠀⢰⣶⣶⣶⣶⣶⣶⣶⣶⣶⣶⣶⣶⣶⣶⣶⣶⣶⣶⣶⣶⣶⣶⣶⣶⣶⣶⡆⠀
+⠀⠈⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠁⠀
+`);
         mainMenu();
     } else {
         console.log(chalk.red('Invalid username or PIN. Please try again.'));
@@ -100,12 +117,12 @@ function login() {
 
 function mainMenu() {
     console.log(`
-\nMain Menu:
-1. Check Balance
-2. Deposit Funds
-3. Withdraw Funds
-4. Transfer Money
-5. View Transaction History
+\nMain Menu 🏧:
+1. Check Balance 📈
+2. Deposit Funds 📶
+3. Withdraw Funds 💰
+4. Transfer Money 💸
+5. View Transaction History 🏛️
 6. Logout
 7. Exit`);
     
@@ -346,8 +363,11 @@ function transferMoney() {
                 mainMenu();
                 return;
             }
+
+const spinner = createSpinner('Transferring funds...').start();
+
+setTimeout(() => {
         
-            
             // Transfer funds
             currentUser.balance -= amount;
             recipient.balance += amount;
@@ -368,6 +388,8 @@ function transferMoney() {
                 sender: currentUser.username, 
                 purpose: purpose 
             });
+
+ spinner.stop();
 
 
     const form = [`Transfer Money:`, 
@@ -390,6 +412,9 @@ function transferMoney() {
             console.log(chalk.green('Transfer successful.'));
             console.log(form)
             mainMenu();
+
+ }, 2000);
+
         }
         
         //----------------------------------------------------------------------
