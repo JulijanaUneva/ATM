@@ -27,15 +27,6 @@ function cerrarSesion() {
   }, 1000);
 }
 
-function salirDelPrograma() {
-  const spinner = createSpinner("Saliendo del programa...").start();
-  setTimeout(() => {
-    spinner.stop();
-    console.log(chalk.yellow("Ha salido del programa."));
-    process.exit(0);
-  }, 1000);
-}
-
 export default function iniciarSesion() {
   const nombreUsuario = readlineSync.question("Ingrese el nombre de usuario: ");
 
@@ -92,7 +83,7 @@ export default function iniciarSesion() {
 
 function menuPrincipal() {
   console.log(`
-\nMenú Principal:
+\nMenú Principal 🏧:
 1. Consultar saldo
 2. Depositar dinero
 3. Retirar dinero
@@ -200,6 +191,12 @@ function retirarDinero() {
 }
 
 function transferirDinero() {
+  function formatiereFormularfeld(label, wert) {
+    const maxLabelLänge = 22; // Maximale Länge für das Label
+    const labelMitPadding = label + ":".padEnd(maxLabelLänge - label.length);
+    return `| ${labelMitPadding} ${wert.padEnd(40 - maxLabelLänge, "_")}   |`;
+  }
+
   const nombreUsuarioDestino = readlineSync.question(
     "Ingrese el nombre de usuario del destinatario: "
   );
@@ -271,7 +268,32 @@ function transferirDinero() {
 
     spinner.stop();
 
+    const formular = [
+      `Transferir dinero:`,
+
+      `  __________________________________________________ `,
+      `//                                                  \\  `,
+      `|   Formulario de Transferencia                       |`,
+      `|____________________________________________________|`,
+      formatiereFormularfeld(
+        "Nombre de usuario del destinatario",
+        nombreUsuarioDestino
+      ),
+      `|                                                    |`,
+      formatiereFormularfeld("Propósito de la transferencia", motivo),
+      `|                                                    |`,
+      formatiereFormularfeld(
+        "Cantidad de la transferencia",
+        "$" + monto.toFixed(2)
+      ),
+      `|____________________________________________________|`,
+      `|                                                    |`,
+      `| [Enviar]                                           |`,
+      `|____________________________________________________|`,
+    ];
+
     console.log(chalk.green("Transferencia exitosa."));
+    console.log(formular);
     menuPrincipal();
   }, 2000);
 }

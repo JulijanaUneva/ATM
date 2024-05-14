@@ -31,7 +31,7 @@ function chooseLanguage() {
   console.log("Choose your language:");
   console.log("1. 🇺🇸 English");
   console.log("2. 🇩🇪 Deutsch");
-  console.log("3. Espanol");
+  console.log("3. 🇪🇸 Español");
 
   const choice = readlineSync.questionInt("Enter your choice: ");
 
@@ -50,7 +50,7 @@ function chooseLanguage() {
   }
 }
 
-chooseLanguage();
+//chooseLanguage();
 
 function logout() {
   const spinner = createSpinner("Logging out...").start();
