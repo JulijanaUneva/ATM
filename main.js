@@ -5,6 +5,7 @@ import {setTimeout as pause} from 'timers/promises';
 import figlet from "figlet";
 import gradient from "gradient-string";
 import { createSpinner } from 'nanospinner';
+import loginDe from "./main-de.js";
 // 🪙 🧸ྀི ℹ️ ١٥٧٤♡ money💸.𓆝 𓆟 𓆞 𓆝 𓆟(づ ᴗ _ᴗ)づ♡༘⋆😍⭐💱💲 🤑💰💸💲🧠
 // 🏦🏧💳💵
 // 💵💸💰💲🎁💴💶💯
@@ -36,22 +37,13 @@ function chooseLanguage() {
     if (choice === 1) {
         
         console.log("Starting English version...");
-
-        import("./main.js")
-    .then(module => module.default())
-    .catch(error => console.error("Error loading English version:", error));
-                              // Englisch
+        login()
 
     } else if (choice === 2) {
         
         console.log("Starte deutsche Version...");
 
-                             //Deutsch
-
-        import("./main-de.js")
-        .then(module => module.default())
-        .catch(error => console.error("Error loading German version:", error));
-        //login()
+        loginDe()
 
     } else {
         console.log("Invalid choice. Please enter 1 or 2.");
@@ -368,5 +360,4 @@ function viewTransactionHistory() {
 
 
 
-
-login();
+chooseLanguage()
