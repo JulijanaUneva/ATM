@@ -5,64 +5,9 @@ import {setTimeout as pause} from 'timers/promises';
 import figlet from "figlet";
 import gradient from "gradient-string";
 import { createSpinner } from 'nanospinner';
-
-//import chalk from "chalk";
-
-// let yourName = readlineSync.question("What is your name?\n*");
-// console.log(yourName)
-
-//chalk
-
-// console.log(chalk.blue('Hello') + ' World' + chalk.red('!'));
-// console.log(`${chalk.blue('Hello')} World${chalk.red('!')}`);
-// console.log(chalk.blue.bgRed.bold('Hello world!'));
-
-// console.log(chalk.rgb(123, 45, 67).underline('Underlined reddish color'));
-// console.log(chalk.hex('#DEADED').bold('Bold gray!'));
-
-//rainbow
-
-// const rainbow = chalkAnimation.rainbow('Willkommen auf mein Zahlenratenspiel!');
-// await pause(3000);
-// rainbow.stop();
-
-//figlet
-
-
-// figlet("Hello World!!", function (err, data) {
-//   if (err) {
-//     console.log("Something went wrong...");
-//     console.dir(err);
-//     return;
-//   }
-//   console.log(data);
-// });
-
-//gradient-string
-
-//import figlet from "figlet";  das habe ich schon
-
-
-// const nachricht = "Hallo WebKids!"
-
-// figlet(nachricht, (err, data) => {
-//   console.log(gradient.instagram.multiline(data));
-// });
-
-//spinner
-
-
-//import {setTimeout as pause} from 'timers/promises';
-
-// const spinner = createSpinner('Testlauf').start();
-// await pause(3000);
-// spinner.success();
-
-// const spinner1 = createSpinner('Noch ein Test').start()
-// await pause(4000);
-// spinner1.success()
-
-
+// 🪙 🧸ྀི ℹ️ ١٥٧٤♡ money💸.𓆝 𓆟 𓆞 𓆝 𓆟(づ ᴗ _ᴗ)づ♡༘⋆😍⭐💱💲 🤑💰💸💲🧠
+// 🏦🏧💳💵
+// 💵💸💰💲🎁💴💶💯
 
 
 const users = [
@@ -72,13 +17,95 @@ const users = [
 
 let currentUser = null;
 
+// function logout() {
+//     const spinner = createSpinner('Logging out...').start();
+//     setTimeout(() => {
+//         spinner.stop();
+//         currentUser = null;
+//         login();
+//     }, 1000);
+// }
+
+function chooseLanguage() {
+    console.log("Choose your language:");
+    console.log("1. 🇺🇸 English");
+    console.log("2. 🇩🇪 Deutsch");
+
+    const choice = readlineSync.questionInt("Enter your choice: ");
+
+    if (choice === 1) {
+        
+        console.log("Starting English version...");
+
+        import("./main.js")
+    .then(module => module.default())
+    .catch(error => console.error("Error loading English version:", error));
+                              // Englisch
+
+    } else if (choice === 2) {
+        
+        console.log("Starte deutsche Version...");
+
+                             //Deutsch
+
+        import("./main-de.js")
+        .then(module => module.default())
+        .catch(error => console.error("Error loading German version:", error));
+        //login()
+
+    } else {
+        console.log("Invalid choice. Please enter 1 or 2.");
+        chooseLanguage(); 
+    }
+}
+
+chooseLanguage();
+
+function logout() {
+    const spinner = createSpinner('Logging out...').start();
+    setTimeout(() => {
+        spinner.stop();
+        console.log(chalk.yellow('Log out')); 
+        currentUser = null;
+        login();
+    }, 1000);
+}
+
+function exitProgram() {
+    const spinner = createSpinner('Exiting...').start();
+    setTimeout(() => {
+        spinner.stop();
+        console.log(chalk.yellow('You have exited the program.'));
+        process.exit(0);
+    }, 1000);
+}
+
+// function exitProgram() {
+//     const spinner = createSpinner('Exiting...').start();
+//     setTimeout(() => {
+//         spinner.stop();
+//         console.log(chalk.yellow('Exiting...'));
+//         setTimeout(() => {
+//             process.exit(0);
+//         }, 1000);
+//     }, 1000);
+// }
+
+
 function login() {
 
     const username = readlineSync.question('Enter username: ');
 
+    // if (username.toLowerCase() === 'exit') {
+    //     console.log(chalk.yellow('Exiting...'));
+    //     process.exit(0); 
+    //     //exitProgram();
+    // }
+
     if (username.toLowerCase() === 'exit') {
         console.log(chalk.yellow('Exiting...'));
-        process.exit(0); 
+       // exitProgram();
+       process.exit(0); 
     }
 
     const pin = readlineSync.question('Enter PIN: ', { hideEchoBack: true });
@@ -86,6 +113,7 @@ function login() {
     if (pin.toLowerCase() === 'exit') {
         console.log(chalk.yellow('Exiting...'));
         process.exit(0); 
+        //exitProgram();
     }
 
     currentUser = users.find(user => user.username === username && user.pin === pin);
@@ -95,7 +123,10 @@ function login() {
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣤⣶⣿⣿⣷⣤⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 ⠀⠀⠀⠀⠀⠀⠀⣀⣴⣾⣿⣿⣿⣿⣿⠋⣉⣉⠙⣿⣿⣿⣷⣦⣀⠀⠀⠀⠀⠀
-⠀⠀⠀⢀⣤⣶⣿⣿⣿⣿⣿⣿⣿⣿⣿⠀⣿⣿⠀⣿⣿⣿⣿⣿⣿⣶⣤⡀⠀⠀⠀
+⠀⠀⠀⢀⣤⣶⣿⣿⣿⣿⣿⣿⣿⣿⣿⠀⣿⣿⠀⣿⣿⣿⣿⣿⣿⣶⣤⡀⠀
+
+         Welcome, ${chalk.green(currentUser.username)}
+⠀
 ⠀⠀⠀⣤⣤⣤⣤⣤⡄⠀⠀⠀⢀⣠⣿⣿⣤⣤⣄⡀⠀⢠⣤⣤⣤⣤⣤⠀⠀⠀
 ⠀⠀⠀⠀⣿⣿⣿⠀⠀⠀⢀⣴⣿⡿⠛⠛⠛⠛⠛⠇⠀⠀⠀⣿⣿⣿⠀⠀⠀⠀
 ⠀⠀⠀⠀⣿⣿⣿⠀⠀⠀⣸⣿⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⣿⣿⠀⠀⠀⠀
@@ -110,7 +141,7 @@ function login() {
 `);
         mainMenu();
     } else {
-        console.log(chalk.red('Invalid username or PIN. Please try again.'));
+        console.log(chalk.red('❌ Invalid username or PIN. Please try again.'));
         login();
     }
 }
@@ -118,11 +149,11 @@ function login() {
 function mainMenu() {
     console.log(`
 \nMain Menu 🏧:
-1. Check Balance 📈
-2. Deposit Funds 📶
-3. Withdraw Funds 💰
-4. Transfer Money 💸
-5. View Transaction History 🏛️
+1. Check Balance 
+2. Deposit Funds 
+3. Withdraw Funds 
+4. Transfer Money 
+5. View Transaction History 
 6. Logout
 7. Exit`);
     
@@ -140,8 +171,9 @@ function mainMenu() {
         viewTransactionHistory();
     } else if (choice === 6) {
         console.log(chalk.yellow('Logging out...'));
-        currentUser = null;
-        login();
+        logout()
+       // currentUser = null;
+       // login();
     } else if (choice === 7) {
         console.log(chalk.yellow('Exiting...'));
         process.exit(0); 
@@ -170,13 +202,13 @@ function depositFunds() {
     const amount = parseInt(amountInput);
 
     if (isNaN(amount)) {
-        console.log(chalk.red('Invalid input. Please enter a valid number or "exit".'));
+        console.log(chalk.red('❌ Invalid input. Please enter a valid number or "exit".'));
         mainMenu();
         return;
     }
 
     if (amount <= 0) {
-        console.log(chalk.red('Invalid amount. Deposit not successful.'));
+        console.log(chalk.red('❌ Invalid amount. Deposit not successful.'));
         mainMenu();
         return;
     }
@@ -189,7 +221,7 @@ function depositFunds() {
 
 
 function withdrawFunds() {
-    const amountStr = readlineSync.question('Enter the amount to withdraw: ');
+    const amountStr = readlineSync.question('Enter the amount to withdraw: $');
 
     if (amountStr.toLowerCase() === 'exit') {
         console.log(chalk.yellow('Exiting...'));
@@ -199,119 +231,22 @@ function withdrawFunds() {
     const amount = parseFloat(amountStr); //parseInt
 
     if (isNaN(amount) || amount <= 0) {
-        console.log(chalk.red('Invalid amount. Withdraw not successful.'));
+        console.log(chalk.red('❌ Invalid amount. Withdraw not successful.'));
         mainMenu();
         return;
     }
 
     if (amount > currentUser.balance) {
-        console.log(chalk.red('Insufficient funds.'));
+        console.log(chalk.red('❌ Insufficient funds.'));
     } else {
         currentUser.balance -= amount;
         currentUser.transactions.push({ type: 'Withdrawal', amount, date: new Date() });
-        console.log(chalk.green('Withdrawal successful.'));
+        console.log(chalk.green('√ Withdrawal successful.'));
     }
 
     mainMenu();
 }
 
-
-
-
-// function transferMoney() {
-//     const recipientUsername = readlineSync.question('Enter recipient username: ');
-//     const recipient = users.find(user => user.username === recipientUsername);
-
-//     if (!recipient) {
-//         console.log(chalk.red('Recipient not found.'));
-//         mainMenu();
-//         //return;
-//     }
-//     if (amount <= 0) {
-//         console.log(chalk.red('Invalid amount. Transfer not successful.'));
-//         mainMenu();
-//     }
-
-//     const amount = readlineSync.questionFloat('Enter the amount to transfer: ');//Float
-
-//     if (amount <= 0) {
-//         console.log(chalk.red('Invalid amount.'));
-//         mainMenu();
-//         return;
-//     }
-
-//     if (amount > currentUser.balance) {
-//         console.log(chalk.red('Insufficient funds.'));
-//         mainMenu();
-//         return;
-//     }
-
-//     // Transfer funds
-//     currentUser.balance -= amount;
-//     recipient.balance += amount;
-
-//     // Record transaction
-//     currentUser.transactions.push({ type: 'Transfer (out)', amount: -amount, date: chalk.green(new Date()) });
-//     recipient.transactions.push({ type: 'Transfer (in)', amount: +amount, date: chalk.green(new Date()) });
-
-//     console.log(chalk.green('Transfer successful.'));
-//     mainMenu();
-// }
-
-//---------------------------------------------
-
-// function transferMoney() {
-
-//     const recipientUsername = readlineSync.question('Enter recipient username: ');
-
-//     if (recipientUsername.toLowerCase() === 'exit') {
-//         console.log(chalk.yellow('Exiting...'));
-//         mainMenu(); 
-//     }
-
-//     const recipient = users.find(user => user.username === recipientUsername);
-
-//     if (!recipient) {
-//         console.log(chalk.red('Recipient not found.'));
-//         mainMenu();
-//         return;
-//     }
-
-//     const amountStr = readlineSync.question('Enter the amount to transfer: ');
-
-//     if (amountStr.toLowerCase() === 'exit') {
-//         console.log(chalk.yellow('Exiting...'));
-//         mainMenu()
-//     }
-
-//     const amount = parseFloat(amountStr); 
-
-//     if (isNaN(amount) || amount <= 0) {
-//         console.log(chalk.red('Invalid amount. Transfer not successful.'));
-//         mainMenu();
-//         return;
-//     }
-
-//     if (amount > currentUser.balance) {
-//         console.log(chalk.red('Insufficient funds.'));
-//         mainMenu();
-//         return;
-//     }
-
-
-//     // Transfer funds
-//     currentUser.balance -= amount;
-//     recipient.balance += amount;
-
-//     // Record transaction
-//     currentUser.transactions.push({ type: 'Transfer (out)', amount: -amount, date: new Date() });
-//     recipient.transactions.push({ type: 'Transfer (in)', amount: +amount, date: new Date() });
-
-//     console.log(chalk.green('Transfer successful.'));
-//     mainMenu();
-// }
-
-//------------------------------------------------------------------
 
 function transferMoney() {
 
@@ -341,7 +276,7 @@ function transferMoney() {
     }
 
     const purpose = readlineSync.question('Enter purpose of transfer: ');
-    const amountStr = readlineSync.question('Enter the amount to transfer: ');
+    const amountStr = readlineSync.question('Enter the amount to transfer: $');
 
     if (amountStr.toLowerCase() === 'exit') {
         console.log(chalk.yellow('Exiting...'));
@@ -368,11 +303,11 @@ const spinner = createSpinner('Transferring funds...').start();
 
 setTimeout(() => {
         
-            // Transfer funds
+            // !Transfer funds
             currentUser.balance -= amount;
             recipient.balance += amount;
         
-            // Record transaction
+            // ! Record transaction
             currentUser.transactions.push({ 
                 type: 'Transfer (out)', 
                 amount: -amount, 
@@ -416,10 +351,10 @@ setTimeout(() => {
  }, 2000);
 
         }
-        
-        //----------------------------------------------------------------------
 
    // const amountPlaceholder = `[${amount}____________________]`;
+
+
 
 
 function viewTransactionHistory() {
@@ -430,6 +365,8 @@ function viewTransactionHistory() {
     });
     mainMenu();
 }
+
+
 
 
 login();
