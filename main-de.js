@@ -229,7 +229,7 @@ function geldÜberweisen() {
     return;
   }
 
-  const empfänger = users.find(
+  const empfänger = benutzer.find(
     (benutzer) => benutzer.benutzername === empfängerBenutzername
   );
 
