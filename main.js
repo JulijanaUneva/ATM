@@ -18,17 +18,36 @@ const users = [
 
 let currentUser = null;
 
-// function logout() {
-//     const spinner = createSpinner('Logging out...').start();
-//     setTimeout(() => {
-//         spinner.stop();
-//         currentUser = null;
-//         login();
-//     }, 1000);
-// }
+// let myString = "        Hello, World!";
+// figlet(myString, function (err, data) {
+//   if (err) {
+//     console.log("Something went wrong...");
+//     console.dir(err);
+//     return;
+//   }
+//   console.log(gradient.rainbow(data));
+// });
+//await wait(3000);
+
+const nachricht = "Welcome to payFriend!";
+figlet(nachricht, (err, data) => {
+  console.log(gradient.instagram.multiline(data));
+});
+await wait(3000);
 
 function chooseLanguage() {
-  console.log(chalk.hex("#DEADED").bold("Choose your language:"));
+  //   let myString = "        Hello, World!";
+  //   figlet(myString, function (err, data) {
+  //     if (err) {
+  //       console.log("Something went wrong...");
+  //       console.dir(err);
+  //       return;
+  //     }
+  //     console.log(gradient.rainbow(data));
+  //   });
+
+  // console.log(chalk.blue.bgHex("#DEADED").bold("Welcome to payFriend"));
+  console.log(chalk.hex("#DEADED").bold("\nChoose your language:"));
   console.log("1. 🇺🇸 English");
   console.log("2. 🇩🇪 Deutsch");
   console.log("3. 🇪🇸 Español");
@@ -52,8 +71,6 @@ function chooseLanguage() {
   }
 }
 
-//chooseLanguage();
-
 function logout() {
   const spinner = createSpinner("Logging out...").start();
   setTimeout(() => {
@@ -64,36 +81,10 @@ function logout() {
   }, 1000);
 }
 
-// function exitProgram() {
-//   const spinner = createSpinner("Exiting...").start();
-//   setTimeout(() => {
-//     spinner.stop();
-//     console.log(chalk.yellow("You have exited the program."));
-//     process.exit(0);
-//   }, 1000);
-// }
-
-// function exitProgram() {
-//     const spinner = createSpinner('Exiting...').start();
-//     setTimeout(() => {
-//         spinner.stop();
-//         console.log(chalk.yellow('Exiting...'));
-//         setTimeout(() => {
-//             process.exit(0);
-//         }, 1000);
-//     }, 1000);
-// }
-
 function login() {
   const username = readlineSync.question(
     chalk.hex("#DEADED").bold("\nEnter username: ")
   );
-
-  // if (username.toLowerCase() === 'exit') {
-  //     console.log(chalk.yellow('Exiting...'));
-  //     process.exit(0);
-  //     //exitProgram();
-  // }
 
   if (username.toLowerCase() === "exit") {
     console.log(chalk.yellow("Exiting..."));
@@ -200,8 +191,6 @@ function checkBalance() {
   mainMenu();
 }
 
-//--------------------------------
-
 function depositFunds() {
   const amountInput = readlineSync.question("Enter the amount to deposit: $");
 
@@ -240,7 +229,7 @@ function withdrawFunds() {
     mainMenu();
   }
 
-  const amount = parseFloat(amountStr); //parseInt
+  const amount = parseFloat(amountStr);
 
   if (isNaN(amount) || amount <= 0) {
     console.log(chalk.red("❌ Invalid amount. Withdraw not successful."));
@@ -264,22 +253,21 @@ function withdrawFunds() {
 }
 
 async function animateFlyingMoney() {
-  console.clear(); // Bildschirm löschen
-  const moneyIcon = "💸"; // Geldsymbol
-  let moneyPosition = ""; // Startposition des Geldsymbols
+  console.clear();
+  const moneyIcon = "💸";
+  let moneyPosition = "";
   for (let i = 0; i < 20; i++) {
-    // Schleife für die Animation
-    moneyPosition += " "; // Leerzeichen für die Positionierung
-    console.log(chalk.yellow(moneyPosition + moneyIcon)); // Geldsymbol mit Farbe ausgeben
-    await wait(100); // 100 Millisekunden warten
-    console.clear(); // Bildschirm löschen für die nächste Position
+    moneyPosition += " ";
+    console.log(chalk.yellow(moneyPosition + moneyIcon));
+    await wait(100);
+    console.clear();
   }
 }
 
 function transferMoney() {
   animateFlyingMoney();
   function formatFormField(label, value) {
-    const maxLabelLength = 22; // Max Länge für das Label
+    const maxLabelLength = 26; // Max Länge für das Label
     const labelWithPadding = chalk
       .hex("#DEADED")
       .bold(label + ":")
@@ -321,7 +309,6 @@ function transferMoney() {
     mainMenu();
   }
 
-  //----------------------------------------
   if (amount > currentUser.balance) {
     console.log(chalk.red("Insufficient funds."));
     mainMenu();
@@ -377,17 +364,12 @@ function transferMoney() {
   }, 2000);
 }
 
-//animateFlyingMoney();
-
-// const amountPlaceholder = `[${amount}____________________]`;
-
 function viewTransactionHistory() {
   console.log(chalk.green("\nTransaction History:"));
   currentUser.transactions.forEach((transaction) => {
     console.log(
       `${transaction.date} - ${transaction.type}: $${transaction.amount}`
     );
-    //toLocalString()  oder toString()
   });
   mainMenu();
 }
