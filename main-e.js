@@ -5,14 +5,19 @@
 import readlineSync from "readline-sync";
 import chalk from "chalk";
 import chalkAnimation from "chalk-animation";
-import { setTimeout as pause } from "timers/promises";
+import { setTimeout as wait } from "timers/promises";
 import figlet from "figlet";
 import gradient from "gradient-string";
 import { createSpinner } from "nanospinner";
 
 const usuarios = [
-  { nombreUsuario: "usuario1", pin: "1234", saldo: 1000, transacciones: [] },
-  { nombreUsuario: "usuario2", pin: "5678", saldo: 500, transacciones: [] },
+  {
+    nombreUsuario: "Julijana Uneva",
+    pin: "1234",
+    saldo: 1000,
+    transacciones: [],
+  },
+  { nombreUsuario: "Markus Steck", pin: "5678", saldo: 500, transacciones: [] },
 ];
 
 let usuarioActual = null;
@@ -28,14 +33,21 @@ function cerrarSesion() {
 }
 
 export default function iniciarSesion() {
-  const nombreUsuario = readlineSync.question("Ingrese el nombre de usuario: ");
+  const nombreUsuario = readlineSync.question(
+    chalk.hex("#DEADED").bold("\nIngrese el nombre de usuario: ")
+  );
 
   if (nombreUsuario.toLowerCase() === "salir") {
     console.log(chalk.yellow("Saliendo del programa..."));
     process.exit(0);
   }
 
-  const pin = readlineSync.question("Ingrese el PIN: ", { hideEchoBack: true });
+  const text = "Ingrese el PIN: ";
+  const formattedText = chalk.hex("#DEADED").bold(text);
+
+  const pin = readlineSync.question(formattedText, { hideEchoBack: true });
+
+  // const pin = readlineSync.question("Ingrese el PIN: ", { hideEchoBack: true });
 
   if (pin.toLowerCase() === "salir") {
     console.log(chalk.yellow("Saliendo del programa..."));
@@ -47,16 +59,30 @@ export default function iniciarSesion() {
   );
 
   if (usuarioActual) {
-    console.log(chalk.green(`¡Bienvenido, ${usuarioActual.nombreUsuario}!`));
+    console.log(
+      chalk
+        .hex("#6EC6FF")
+        .bold.underline(`\n¡Bienvenido, ${usuarioActual.nombreUsuario}!`)
+    );
+
+    // if (usuarioActual) {
+    //   console.log(chalk.green(`¡Bienvenido, ${usuarioActual.nombreUsuario}!`));
+
     console.log(`
-───────────────────────────────────────────────
+
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣤⣶⣿⣿⣷⣤⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 ⠀⠀⠀⠀⠀⠀⠀⣀⣴⣾⣿⣿⣿⣿⣿⠋⣉⣉⠙⣿⣿⣿⣷⣦⣀⠀⠀⠀⠀⠀
 ⠀⠀⠀⢀⣤⣶⣿⣿⣿⣿⣿⣿⣿⣿⣿⠀⣿⣿⠀⣿⣿⣿⣿⣿⣿⣶⣤⡀⠀
 
-    ¡Bienvenido, ${chalk.green(usuarioActual.nombreUsuario)}!
-⠀
+${chalk.blue
+  .bgHex("#DEADED")
+  .bold(
+    "Muchas gracias " +
+      usuarioActual.nombreUsuario +
+      " por elegir \nPayFriend para todas sus necesidades bancarias"
+  )}
+
 ⠀⠀⠀⣤⣤⣤⣤⣤⡄⠀⠀⠀⢀⣠⣿⣿⣤⣤⣄⡀⠀⢠⣤⣤⣤⣤⣤⠀⠀⠀
 ⠀⠀⠀⠀⣿⣿⣿⠀⠀⠀⢀⣴⣿⡿⠛⠛⠛⠛⠛⠇⠀⠀⠀⣿⣿⣿⠀⠀⠀⠀
 ⠀⠀⠀⠀⣿⣿⣿⠀⠀⠀⣸⣿⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⣿⣿⠀⠀⠀⠀
@@ -68,7 +94,7 @@ export default function iniciarSesion() {
 ⠀⠀⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠀⠉⠉⠀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⠀⠀
 ⠀⢰⣶⣶⣶⣶⣶⣶⣶⣶⣶⣶⣶⣶⣶⣶⣶⣶⣶⣶⣶⣶⣶⣶⣶⣶⣶⣶⡆⠀
 ⠀⠈⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠁⠀    
-───────────────────────────────────────────────
+
 `);
     menuPrincipal();
   } else {
@@ -83,7 +109,7 @@ export default function iniciarSesion() {
 
 function menuPrincipal() {
   console.log(`
-\nMenú Principal 🏧:
+\n${chalk.hex("#6EC6FF").bold.underline("Menú Principal")} 🏧:
 1. Consultar saldo
 2. Depositar dinero
 3. Retirar dinero
@@ -92,7 +118,9 @@ function menuPrincipal() {
 6. Cerrar sesión
 7. Salir del programa`);
 
-  const opcion = readlineSync.questionInt("Ingrese su opción: ");
+  const opcion = readlineSync.questionInt(
+    `${chalk.hex("#DEADED").bold("\nIngrese su opción: ")}`
+  );
 
   if (opcion === 1) {
     consultarSaldo();
@@ -117,13 +145,13 @@ function menuPrincipal() {
 }
 
 function consultarSaldo() {
-  console.log(chalk.green(`Su saldo actual: $${usuarioActual.saldo}`));
+  console.log(chalk.green(`Su saldo actual: €${usuarioActual.saldo}`));
   menuPrincipal();
 }
 
 function depositarDinero() {
   const montoIngresado = readlineSync.question(
-    "Ingrese el monto a depositar: $"
+    "Ingrese el monto a depositar: €"
   );
 
   if (montoIngresado.toLowerCase() === "salir") {
@@ -160,7 +188,7 @@ function depositarDinero() {
 }
 
 function retirarDinero() {
-  const montoIngresado = readlineSync.question("Ingrese el monto a retirar: $");
+  const montoIngresado = readlineSync.question("Ingrese el monto a retirar: €");
 
   if (montoIngresado.toLowerCase() === "salir") {
     console.log(chalk.yellow("Saliendo del programa..."));
@@ -190,12 +218,36 @@ function retirarDinero() {
   menuPrincipal();
 }
 
-function transferirDinero() {
-  function formatiereFormularfeld(label, wert) {
-    const maxLabelLänge = 22; // Maximale Länge für das Label
-    const labelMitPadding = label + ":".padEnd(maxLabelLänge - label.length);
-    return `| ${labelMitPadding} ${wert.padEnd(40 - maxLabelLänge, "_")}   |`;
+async function animateFlyingMoney() {
+  console.clear();
+  const moneyIcon = "💸";
+  let moneyPosition = "";
+  for (let i = 0; i < 20; i++) {
+    moneyPosition += " ";
+    console.log(chalk.yellow(moneyPosition + moneyIcon));
+    await wait(100);
+    console.clear();
   }
+}
+
+function transferirDinero() {
+  animateFlyingMoney();
+  function formatiereFormularfeld(label, value) {
+    const maxLabelLänge = 26; // Max Länge für das Label
+    const labelMitPadding = chalk
+      .hex("#DEADED")
+      .bold(label + ":")
+      .padEnd(maxLabelLänge, " ");
+    const valueMitPadding = chalk.hex("#FFFFFF")(
+      value.padEnd(47 - maxLabelLänge, "_")
+    );
+    return `| ${labelMitPadding} ${valueMitPadding} |`;
+  }
+
+  //   const maxLabelLänge = 22; // Maximale Länge für das Label
+  //   const labelMitPadding = label + ":".padEnd(maxLabelLänge - label.length);
+  //   return `| ${labelMitPadding} ${wert.padEnd(40 - maxLabelLänge, "_")}   |`;
+  // }
 
   const nombreUsuarioDestino = readlineSync.question(
     "Ingrese el nombre de usuario del destinatario: "
@@ -221,7 +273,7 @@ function transferirDinero() {
     "Ingrese el motivo de la transferencia: "
   );
   const montoIngresado = readlineSync.question(
-    "Ingrese el monto a transferir: $"
+    "Ingrese el monto a transferir: €"
   );
 
   if (montoIngresado.toLowerCase() === "salir") {
@@ -284,16 +336,17 @@ function transferirDinero() {
       `|                                                    |`,
       formatiereFormularfeld(
         "Cantidad de la transferencia",
-        "$" + monto.toFixed(2)
+        "€" + monto.toFixed(2)
       ),
       `|____________________________________________________|`,
       `|                                                    |`,
       `| [Enviar]                                           |`,
       `|____________________________________________________|`,
     ];
+    console.log(formular.join("\n"));
 
     console.log(chalk.green("Transferencia exitosa."));
-    console.log(formular);
+    //console.log(formular);
     menuPrincipal();
   }, 2000);
 }
@@ -302,7 +355,7 @@ function verHistorialTransacciones() {
   console.log(chalk.green("\nHistorial de transacciones:"));
   usuarioActual.transacciones.forEach((transaccion) => {
     console.log(
-      `${transaccion.fecha} - ${transaccion.tipo}: $${transaccion.monto}`
+      `${transaccion.fecha} - ${transaccion.tipo}: €${transaccion.monto}`
     );
   });
   menuPrincipal();

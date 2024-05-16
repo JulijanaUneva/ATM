@@ -1,7 +1,7 @@
 import readlineSync from "readline-sync";
 import chalk from "chalk";
 import chalkAnimation from "chalk-animation";
-import { setTimeout as pause } from "timers/promises";
+import { setTimeout as wait } from "timers/promises";
 import figlet from "figlet";
 import gradient from "gradient-string";
 import { createSpinner } from "nanospinner";
@@ -10,8 +10,18 @@ import { createSpinner } from "nanospinner";
 // 💵💸💰💲🎁💴💶💯
 
 const benutzer = [
-  { benutzername: "benutzer1", pin: "1234", guthaben: 1000, transaktionen: [] },
-  { benutzername: "benutzer2", pin: "5678", guthaben: 500, transaktionen: [] },
+  {
+    benutzername: "Julijana Uneva",
+    pin: "1234",
+    guthaben: 1000,
+    transaktionen: [],
+  },
+  {
+    benutzername: "Markus Steck",
+    pin: "5678",
+    guthaben: 500,
+    transaktionen: [],
+  },
 ];
 
 let aktuellerBenutzer = null;
@@ -44,14 +54,21 @@ function programmBeenden() {
 }
 
 export default function loginDe() {
-  const benutzername = readlineSync.question("Benutzername eingeben: ");
+  const benutzername = readlineSync.question(
+    chalk.hex("#DEADED").bold("\nBenutzername eingeben: ")
+  );
 
   if (benutzername.toLowerCase() === "exit") {
     console.log(chalk.yellow("Beenden..."));
     process.exit(0);
   }
 
-  const pin = readlineSync.question("PIN eingeben: ", { hideEchoBack: true });
+  // const pin = readlineSync.question("PIN eingeben: ", { hideEchoBack: true });
+
+  const text = "PIN eingeben: ";
+  const formattedText = chalk.hex("#DEADED").bold(text);
+
+  const pin = readlineSync.question(formattedText, { hideEchoBack: true });
 
   if (pin.toLowerCase() === "exit") {
     console.log(chalk.yellow("Beenden..."));
@@ -62,17 +79,28 @@ export default function loginDe() {
   aktuellerBenutzer = benutzer.find(
     (benutzer) => benutzer.benutzername === benutzername && benutzer.pin === pin
   );
+
   if (aktuellerBenutzer) {
     // Login erfolgreich
-    console.log(chalk.green(`Willkommen, ${aktuellerBenutzer.benutzername}!`));
+    console.log(
+      chalk
+        .hex("#6EC6FF")
+        .bold.underline(`\nWillkommen, ${aktuellerBenutzer.benutzername}!`)
+    );
     console.log(`
-───────────────────────────────────────────────
+
         ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣤⣶⣿⣿⣷⣤⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 ⠀⠀⠀⠀⠀⠀⠀⣀⣴⣾⣿⣿⣿⣿⣿⠋⣉⣉⠙⣿⣿⣿⣷⣦⣀⠀⠀⠀⠀⠀
 ⠀⠀⠀⢀⣤⣶⣿⣿⣿⣿⣿⣿⣿⣿⣿⠀⣿⣿⠀⣿⣿⣿⣿⣿⣿⣶⣤⡀⠀
 
-     Willkommen, ${chalk.green(aktuellerBenutzer.benutzername)}
+     ${chalk.blue
+       .bgHex("#DEADED")
+       .bold(
+         "Vielen Dank " +
+           aktuellerBenutzer.benutzername +
+           " für die Auswahl von \nPayFriend für alle Ihre Bankgeschäfte"
+       )}
 ⠀
 ⠀⠀⠀⣤⣤⣤⣤⣤⡄⠀⠀⠀⢀⣠⣿⣿⣤⣤⣄⡀⠀⢠⣤⣤⣤⣤⣤⠀⠀⠀
 ⠀⠀⠀⠀⣿⣿⣿⠀⠀⠀⢀⣴⣿⡿⠛⠛⠛⠛⠛⠇⠀⠀⠀⣿⣿⣿⠀⠀⠀⠀
@@ -85,7 +113,7 @@ export default function loginDe() {
 ⠀⠀⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠀⠉⠉⠀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⠀⠀
 ⠀⢰⣶⣶⣶⣶⣶⣶⣶⣶⣶⣶⣶⣶⣶⣶⣶⣶⣶⣶⣶⣶⣶⣶⣶⣶⣶⣶⡆⠀
 ⠀⠈⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠁⠀
-───────────────────────────────────────────────
+
 `);
     hauptmenü();
   } else {
@@ -100,7 +128,7 @@ export default function loginDe() {
 
 function hauptmenü() {
   console.log(`
-\nHauptmenü 🏧:
+\n${chalk.hex("#6EC6FF").bold.underline("Hauptmenü")} 🏧:
 1. Kontostand prüfen 
 2. Geld einzahlen 
 3. Geld abheben 
@@ -109,7 +137,9 @@ function hauptmenü() {
 6. Abmelden
 7. Beenden`);
 
-  const auswahl = readlineSync.questionInt("Ihre Auswahl eingeben: ");
+  const auswahl = readlineSync.questionInt(
+    `${chalk.hex("#DEADED").bold("\nIhre Auswahl eingeben: ")}`
+  );
 
   if (auswahl === 1) {
     kontostandPrüfen();
@@ -134,13 +164,13 @@ function hauptmenü() {
 }
 
 function kontostandPrüfen() {
-  console.log(chalk.green(`Ihr Kontostand: $${aktuellerBenutzer.guthaben}`));
+  console.log(chalk.green(`Ihr Kontostand: €${aktuellerBenutzer.guthaben}`));
   hauptmenü();
 }
 
 function geldEinzahlen() {
   const betragEingabe = readlineSync.question(
-    "Betrag zum Einzahlen eingeben: $"
+    "Betrag zum Einzahlen eingeben: €"
   );
 
   if (betragEingabe.toLowerCase() === "exit") {
@@ -178,7 +208,7 @@ function geldEinzahlen() {
 
 function geldAbheben() {
   const betragStr = readlineSync.question(
-    "Geben Sie den abzuhebenden Betrag ein: $"
+    "Geben Sie den abzuhebenden Betrag ein: €"
   );
 
   if (betragStr.toLowerCase() === "exit") {
@@ -209,15 +239,35 @@ function geldAbheben() {
   hauptmenü();
 }
 
-function geldÜberweisen() {
-  function formatiereFormularfeld(label, wert) {
-    const maxLabelLänge = 22; // Maximale Länge für das Label
-    const labelMitPadding = label + ":".padEnd(maxLabelLänge - label.length);
-    return `| ${labelMitPadding} ${wert.padEnd(47 - maxLabelLänge, "_")}   |`;
+async function animateFlyingMoney() {
+  console.clear();
+  const moneyIcon = "💸";
+  let moneyPosition = "";
+  for (let i = 0; i < 20; i++) {
+    moneyPosition += " ";
+    console.log(chalk.yellow(moneyPosition + moneyIcon));
+    await wait(100);
+    console.clear();
   }
+}
 
-  // const empfängerBenutzernamePlatzhalter = '[__________________________]';
-  // const zweckPlatzhalter = '[_________________________]';
+function geldÜberweisen() {
+  animateFlyingMoney();
+  function formatiereFormularfeld(label, value) {
+    // const maxLabelLänge = 22; // Maximale Länge für das Label
+    // const labelMitPadding = label + ":".padEnd(maxLabelLänge - label.length);
+    // return `| ${labelMitPadding} ${wert.padEnd(47 - maxLabelLänge, "_")}   |`;
+
+    const maxLabelLänge = 26; // Max Länge für das Label
+    const labelMitPadding = chalk
+      .hex("#DEADED")
+      .bold(label + ":")
+      .padEnd(maxLabelLänge, " ");
+    const valueMitPadding = chalk.hex("#FFFFFF")(
+      value.padEnd(47 - maxLabelLänge, "_")
+    );
+    return `| ${labelMitPadding} ${valueMitPadding} |`;
+  }
 
   const empfängerBenutzername = readlineSync.question(
     "Geben Sie den Benutzernamen des Empfängers ein: "
@@ -243,13 +293,13 @@ function geldÜberweisen() {
     "Geben Sie den Zweck der Überweisung ein: "
   );
   const betragStr = readlineSync.question(
-    "Geben Sie den zu überweisenden Betrag ein: $"
+    "Geben Sie den zu überweisenden Betrag ein: €"
   );
 
   if (betragStr.toLowerCase() === "exit") {
     console.log(chalk.yellow("Beenden..."));
     hauptmenü();
-    return; // Hier, wenn es ein Problem gibt!
+    return;
   }
 
   const betrag = parseFloat(betragStr);
@@ -260,7 +310,6 @@ function geldÜberweisen() {
     return;
   }
 
-  //----------------------------------------
   if (betrag > aktuellerBenutzer.guthaben) {
     console.log(chalk.red("Unzureichendes Guthaben."));
     hauptmenü();
@@ -304,15 +353,16 @@ function geldÜberweisen() {
       `|                                                    |`,
       formatiereFormularfeld("Zweck der Überweisung", zweck),
       `|                                                    |`,
-      formatiereFormularfeld("Betrag der Überweisung", "$" + betrag.toFixed(2)),
+      formatiereFormularfeld("Betrag der Überweisung", "€" + betrag.toFixed(2)),
       `|____________________________________________________|`,
       `|                                                    |`,
       `| [Absenden]                                         |`,
       `|____________________________________________________|`,
     ];
+    console.log(formular.join("\n"));
 
     console.log(chalk.green("Überweisung erfolgreich."));
-    console.log(formular);
+    //console.log(formular);
     hauptmenü();
   }, 2000);
 }
@@ -321,9 +371,8 @@ function transaktionshistorieAnzeigen() {
   console.log(chalk.green("\nTransaktionsverlauf:"));
   aktuellerBenutzer.transaktionen.forEach((transaktion) => {
     console.log(
-      `${transaktion.datum} - ${transaktion.typ}: $${transaktion.betrag}`
+      `${transaktion.datum} - ${transaktion.typ}: €${transaktion.betrag}`
     );
-    // toLocalString() oder toString()
   });
   hauptmenü();
 }

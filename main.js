@@ -12,8 +12,8 @@ import iniciarSesion from "./main-e.js";
 // 💵💸💰💲🎁💴💶💯
 
 const users = [
-  { username: "user1", pin: "1234", balance: 1000, transactions: [] },
-  { username: "user2", pin: "5678", balance: 500, transactions: [] },
+  { username: "Julijana Uneva", pin: "1234", balance: 1000, transactions: [] },
+  { username: "Markus Steck", pin: "5678", balance: 500, transactions: [] },
 ];
 
 let currentUser = null;
@@ -36,16 +36,6 @@ figlet(nachricht, (err, data) => {
 await wait(3000);
 
 function chooseLanguage() {
-  //   let myString = "        Hello, World!";
-  //   figlet(myString, function (err, data) {
-  //     if (err) {
-  //       console.log("Something went wrong...");
-  //       console.dir(err);
-  //       return;
-  //     }
-  //     console.log(gradient.rainbow(data));
-  //   });
-
   // console.log(chalk.blue.bgHex("#DEADED").bold("Welcome to payFriend"));
   console.log(chalk.hex("#DEADED").bold("\nChoose your language:"));
   console.log("1. 🇺🇸 English");
@@ -66,7 +56,7 @@ function chooseLanguage() {
     console.log("Starte spanische Version...");
     iniciarSesion();
   } else {
-    console.log("Invalid choice. Please enter 1 or 2.");
+    console.log("Invalid choice. Please enter 1, 2 oder 3");
     chooseLanguage();
   }
 }
