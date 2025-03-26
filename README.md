@@ -35,7 +35,6 @@
 
 
 
-<!-- ABOUT THE PROJECT -->
 ## About The Project
 
 payFriend ATM Application
@@ -73,6 +72,8 @@ Technology Stack
 
 ## 🚀 Getting Startet 
 
+<a name="getting-started"></a>
+
 Before you start, make sure you have the following installed:
 
 ### Prerequisites
@@ -83,11 +84,11 @@ Node.js (v14 or later)
 npm (Node package manager)
 
 ***
-### 📂 Projekt von GitHub klonen und in VS Code öffnen  
+### 📂 Clone the project from GitHub and open it in VS Code
 
-Folge diesen Schritten, um das Projekt herunterzuladen und zu öffnen:  
+Follow these steps to download and open the project:
 
-1. Öffne das Terminal und führe folgenden Befehl aus:  
+1. Open the terminal and run the following command:
 
     ```sh
    git clone https://github.com/JulijanaUneva/ATM.git
