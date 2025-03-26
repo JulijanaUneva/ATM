@@ -150,6 +150,16 @@ Feel free to modify the users array in the code to add more test users or change
 - users: an array containing user data including username, PIN, balance, and transaction history.
 - transaction form: a form displaying transaction details in ASCII art.
 
+<a name="contact"></a>
+
+ ## 📫 How can you reach me
+
+### Julijana <img src="https://github.com/user-attachments/assets/6f751ed6-0e7c-4fb4-95ec-52f5d8ffbfe8" alt="programmer" style="width: 30px; height: 30px;" />
+
+
+ [![LinkedIn](https://img.shields.io/badge/-LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/julijana-uneva-b28a751b5)  [![E-Mail](https://img.shields.io/badge/-E--Mail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:julijana3uneva@gmail.com)   [![GitHub](https://img.shields.io/badge/-GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/JulijanaUneva)
+
+
 [Back to top](#readme-top)
 
 
