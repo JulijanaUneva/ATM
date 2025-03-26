@@ -3,8 +3,7 @@
 
  
 
-
-<!-- TABLE OF CONTENTS -->
+<a name="readme-top"></a>
 <details>
   <summary>Table of Contents</summary>
   <ol>
@@ -73,7 +72,7 @@ Technology Stack
 
 ---
 
-## Getting Startet 
+## 🚀 Getting Startet 
 
 Before you start, make sure you have the following installed:
 
@@ -84,8 +83,8 @@ Before you start, make sure you have the following installed:
 Node.js (v14 or later)
 npm (Node package manager)
 
-
-### 🚀 Projekt von GitHub klonen und in VS Code öffnen  
+***
+### 📂 Projekt von GitHub klonen und in VS Code öffnen  
 
 Folge diesen Schritten, um das Projekt herunterzuladen und zu öffnen:  
 
@@ -130,13 +129,13 @@ Feel free to modify the users array in the code to add more test users or change
 ---
 ## 🗺️ Roadmap
 
-- main.js: Main entry point of the application.
+- main.js: main entry point of the application. This file contains the core logic and initialization of the application, available in English for the user.
 - main-de.js, main-e.js: Language-specific modules for German and Spanish respectively.
-- users: An array containing user data including username, PIN, balance, and transaction history.
+- users: an array containing user data including username, PIN, balance, and transaction history.
+- transaction form: a form displaying transaction details in ASCII art.
 
-See the [open issues](https://github.com/othneildrew/Best-README-Template/issues) for a full list of proposed features (and known issues).
+[Back to top](#readme-top)
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 
