@@ -85,7 +85,7 @@ Node.js (v14 or later)
 npm (Node package manager)
 
 
-## 🚀 Projekt von GitHub klonen und in VS Code öffnen  
+### 🚀 Projekt von GitHub klonen und in VS Code öffnen  
 
 Folge diesen Schritten, um das Projekt herunterzuladen und zu öffnen:  
 
@@ -109,7 +109,7 @@ Folge diesen Schritten, um das Projekt herunterzuladen und zu öffnen:
    ```sh
    node main.js
 
-<!-- USAGE EXAMPLES -->
+---
 ## ⚙️ Usage
 
 Upon running, you will be prompted to choose your preferred language.
@@ -127,8 +127,8 @@ The application comes with pre-configured user accounts for testing: <br>
 Feel free to modify the users array in the code to add more test users or change the existing ones.
 
 
-<!-- ROADMAP -->
-## Roadmap
+---
+## 🗺️ Roadmap
 
 - main.js: Main entry point of the application.
 - main-de.js, main-e.js: Language-specific modules for German and Spanish respectively.
