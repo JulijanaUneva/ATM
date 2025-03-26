@@ -10,13 +10,18 @@
     <li>
       <a href="#about-the-project">About The Project</a>
       <ul>
-        <li><a href="#built-with">Features</a></li>
+        <li><a href="#features">Features</a></li>
       </ul>
     </li>
     <li>
-      <a href="#getting-started">Build with</a>
+      <a href="#build-with">Build with</a>
       <ul>
-        <li><a href="#prerequisites">Technology Stack</a></li>
+        <li><a href="#technology-stack">Technology Stack</a></li>
+      </ul>
+       </li>
+      <li>
+      <a href="#getting-started">Getting Startet</a>
+         <ul>
         <li><a href="#prerequisites">Prerequisites</a></li>
         <li><a href="#installation">Installation</a></li>
       </ul>
@@ -63,8 +68,6 @@ Technology Stack
 * gradient-string: For adding gradient colors to text.
 * nanospinner: For showing spinners during operations like login and money transfer.
 * timers/promises: For adding delays and simulating wait times.
-
-
 
 ---
 
