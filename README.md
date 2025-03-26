@@ -91,18 +91,21 @@ Folge diesen Schritten, um das Projekt herunterzuladen und zu öffnen:
 1. Öffne das Terminal und führe folgenden Befehl aus:  
 
    ```sh
-  [ git clone https://github.com/username/repository.git](https://github.com/JulijanaUneva/ATM.git)
+ https://github.com/JulijanaUneva/ATM.git
 
 
 2.
-      ```sh
-      cd ATM
-  
+
+
+ cd ATM
+
+    
+ 4. 
      ```sh
       code .
-4. Install the dependencies:
+5. Install the dependencies:
  npm install
-5. Run the application:
+6. Run the application:
  node main.js
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
