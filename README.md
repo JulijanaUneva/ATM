@@ -94,11 +94,14 @@ Folge diesen Schritten, um das Projekt herunterzuladen und zu öffnen:
    git clone https://github.com/username/repository.git
 
 
-2. cd ATM
-code .
-3. Install the dependencies:
+2.
+     ```sh
+     cd ATM
+     ```sh
+    code .
+4. Install the dependencies:
  npm install
-4. Run the application:
+5. Run the application:
  node main.js
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
