@@ -94,15 +94,15 @@ Folge diesen Schritten, um das Projekt herunterzuladen und zu öffnen:
     ```sh
    git clone https://github.com/JulijanaUneva/ATM.git
 
-2.
+2. Enter the "ATM" directory
    ```sh
    cd ATM
 
-3.  ```sh
+3. Navigate into the "code"
+    ```sh
     cd code .
 
-   
-4. Install the dependencies:
+5. Install the dependencies:
     ```sh
    npm install
 6. Run the application:
