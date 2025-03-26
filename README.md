@@ -13,8 +13,7 @@
         <li><a href="#features">Features</a></li>
       </ul>
     </li>
-    <li>
-      <a href="#build-with">Build with</a></li>
+    <li><a href="#build-with">Build with</a>
       <ul>
         <li><a href="#technology-stack">Technology Stack</a></li>
       </ul>
@@ -59,8 +58,7 @@ Welcome to the payFriend ATM Application! This console-based application simulat
 
 ---
 
-<a name="built-with"></a>
-
+<a name="build-with"></a>
 ### 🛠️ Built With
 
 <a name="technology-stack"></a>
