@@ -1,8 +1,5 @@
 
 
-
- 
-
 <a name="readme-top"></a>
 <details>
   <summary>Table of Contents</summary>
