@@ -90,8 +90,8 @@ Folge diesen Schritten, um das Projekt herunterzuladen und zu öffnen:
 
 1. Öffne das Terminal und führe folgenden Befehl aus:  
 
-   ```sh
- https://github.com/JulijanaUneva/ATM.git
+ ```sh
+   git clone https://github.com/JulijanaUneva.git
 
 
 2.
