@@ -69,8 +69,6 @@ Technology Stack
 * nanospinner: For showing spinners during operations like login and money transfer.
 * timers/promises: For adding delays and simulating wait times.
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 
 <!-- GETTING STARTED -->
@@ -85,14 +83,22 @@ Before you start, make sure you have the following installed:
 Node.js (v14 or later)
 npm (Node package manager)
 
-### Installation
+---
+## 🚀 Projekt von GitHub klonen und in VS Code öffnen  
 
-1. Clone the repository:
- git clone https://github.com/yourusername/payfriend-atm.git
- cd payfriend-atm
-2. Install the dependencies:
+Folge diesen Schritten, um das Projekt herunterzuladen und zu öffnen:  
+
+1. Öffne das Terminal und führe folgenden Befehl aus:  
+
+   ```sh
+   git clone https://github.com/username/repository.git
+
+
+2. cd ATM
+code .
+3. Install the dependencies:
  npm install
-3. Run the application:
+4. Run the application:
  node main.js
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
