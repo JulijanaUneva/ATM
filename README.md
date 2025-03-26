@@ -33,8 +33,8 @@
 </details>
 
 
-
-## About The Project
+---
+## 📌 About The Project
 
 payFriend ATM Application
 
@@ -59,7 +59,7 @@ Welcome to the payFriend ATM Application! This console-based application simulat
 ---
 
 <a name="build-with"></a>
-### 🛠️ Built With
+## 🛠️ Built With
 
 <a name="technology-stack"></a>
 
