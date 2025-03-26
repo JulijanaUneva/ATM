@@ -71,7 +71,8 @@ Technology Stack
 
 
 
-<!-- GETTING STARTED -->
+---
+
 ## Getting Startet 
 
 Before you start, make sure you have the following installed:
@@ -83,32 +84,30 @@ Before you start, make sure you have the following installed:
 Node.js (v14 or later)
 npm (Node package manager)
 
----
+
 ## 🚀 Projekt von GitHub klonen und in VS Code öffnen  
 
 Folge diesen Schritten, um das Projekt herunterzuladen und zu öffnen:  
 
 1. Öffne das Terminal und führe folgenden Befehl aus:  
 
- ```sh
+    ```sh
    git clone https://github.com/JulijanaUneva/ATM.git
 
-
 2.
+   ```sh
+  cd ATM
 
+3.  ```sh
+    cd code .
 
- cd ATM
-
-    
- 4. 
-     ```sh
-      code .
-5. Install the dependencies:
- npm install
+   
+4. Install the dependencies:
+    ```sh
+   npm install
 6. Run the application:
- node main.js
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+   ```sh
+   node main.js
 
 <!-- USAGE EXAMPLES -->
 ## Usage
