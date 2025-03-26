@@ -96,7 +96,7 @@ Folge diesen Schritten, um das Projekt herunterzuladen und zu öffnen:
 
 2.
    ```sh
-  cd ATM
+   cd ATM
 
 3.  ```sh
     cd code .
