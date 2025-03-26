@@ -35,8 +35,6 @@
 
 payFriend ATM Application
 
-(https://example.com)](https://github.com/user-attachments/assets/61cc79fb-8373-45f5-90eb-bf090c23a149)
-
 [Screencast.webm](https://github.com/user-attachments/assets/61cc79fb-8373-45f5-90eb-bf090c23a149)
 
 
