@@ -116,16 +116,14 @@ Upon running, you will be prompted to choose your preferred language.
 Follow the on-screen instructions to log in using your username and PIN.
 Once logged in, you can navigate through the main menu to perform various banking operations.
 
-
-_For more examples, please refer to the [Documentation](https://example.com)_
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-User Accounts
+User Accounts <br>
+
 The application comes with pre-configured user accounts for testing:
 
-Username: Julijana Uneva, PIN: 1234
-Username: Markus Steck, PIN: 5678
+-Username: Julijana Uneva, PIN: 1234
+-Username: Markus Steck, PIN: 5678
 Feel free to modify the users array in the code to add more test users or change the existing ones.
 
 
