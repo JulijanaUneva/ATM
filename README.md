@@ -110,20 +110,20 @@ Folge diesen Schritten, um das Projekt herunterzuladen und zu öffnen:
    node main.js
 
 <!-- USAGE EXAMPLES -->
-## Usage
+## ⚙️ Usage
 
 Upon running, you will be prompted to choose your preferred language.
 Follow the on-screen instructions to log in using your username and PIN.
 Once logged in, you can navigate through the main menu to perform various banking operations.
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 User Accounts <br>
 
-The application comes with pre-configured user accounts for testing:
+The application comes with pre-configured user accounts for testing: <br>
 
--Username: Julijana Uneva, PIN: 1234
--Username: Markus Steck, PIN: 5678
+-Username: Julijana Uneva, PIN: 1234 <br>
+
+-Username: Markus Steck, PIN: 5678 <br>
+
 Feel free to modify the users array in the code to add more test users or change the existing ones.
 
 
