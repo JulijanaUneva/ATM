@@ -63,7 +63,7 @@ Welcome to the payFriend ATM Application! This console-based application simulat
 
 <a name="technology-stack"></a>
 
-Technology Stack
+### 🖥️ Technology Stack
 
 * JavaScript: Core language used for application logic.
 * readline-sync: For synchronous input from the user via the command line.
@@ -85,7 +85,7 @@ Before you start, make sure you have the following installed:
 
 <a name="prerequisites"></a>
 
-### Prerequisites
+### 🏗️ Prerequisites
 
 Before you start, make sure you have the following installed:
 
