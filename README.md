@@ -158,7 +158,7 @@ Feel free to modify the users array in the code to add more test users or change
 
 
  [![LinkedIn](https://img.shields.io/badge/-LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/julijana-uneva-b28a751b5)  [![E-Mail](https://img.shields.io/badge/-E--Mail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:julijana3uneva@gmail.com)   [![GitHub](https://img.shields.io/badge/-GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/JulijanaUneva)
-
+[julijana3uneva@gmail.com](mailto:julijana3uneva@gmail.com)
 
 [Back to top](#readme-top)
 
