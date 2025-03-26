@@ -14,7 +14,7 @@
       </ul>
     </li>
     <li>
-      <a href="#build-with">Build with</a>
+      <a href="#build-with">Build with</a></li>
       <ul>
         <li><a href="#technology-stack">Technology Stack</a></li>
       </ul>
