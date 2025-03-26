@@ -37,6 +37,9 @@ payFriend ATM Application
 
 (https://example.com)](https://github.com/user-attachments/assets/61cc79fb-8373-45f5-90eb-bf090c23a149)
 
+[Screencast.webm](https://github.com/user-attachments/assets/61cc79fb-8373-45f5-90eb-bf090c23a149)
+
+
 Welcome to the payFriend ATM Application! This console-based application simulates basic ATM functionalities, allowing users to log in, check their balance, deposit and withdraw funds, transfer money, and view their transaction history.
 
 <a name="features"></a>
