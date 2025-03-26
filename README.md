@@ -41,7 +41,7 @@ Welcome to the payFriend ATM Application! This console-based application simulat
 
 <a name="features"></a>
 
-### ✨ Features:
+### ✨ Features
 * Multi-language Support: Users can choose between English, German, and Spanish for their interface language.
 * User Authentication: Secure login using a username and PIN.
 * Account Management:
@@ -60,7 +60,7 @@ Welcome to the payFriend ATM Application! This console-based application simulat
 
 <a name="technology-stack"></a>
 
-### 🖥️ Technology Stack
+### Technology Stack 🖥️
 
 * JavaScript: Core language used for application logic.
 * readline-sync: For synchronous input from the user via the command line.
@@ -82,7 +82,7 @@ Before you start, make sure you have the following installed:
 
 <a name="prerequisites"></a>
 
-### 🏗️ Prerequisites
+### Prerequisites 🏗️ 
 
 Before you start, make sure you have the following installed:
 
