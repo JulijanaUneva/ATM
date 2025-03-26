@@ -58,6 +58,7 @@ Welcome to the payFriend ATM Application! This console-based application simulat
 * Logout and Exit Options: Users can securely log out or exit the application at any time.
 
 ---
+
 <a name="built-with"></a>
 
 ### 🛠️ Built With
@@ -141,6 +142,7 @@ Feel free to modify the users array in the code to add more test users or change
 
 
 ---
+
 <a name="roadmap"></a>
 
 ## 🗺️ Roadmap
