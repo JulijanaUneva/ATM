@@ -43,6 +43,8 @@ payFriend ATM Application
 
 Welcome to the payFriend ATM Application! This console-based application simulates basic ATM functionalities, allowing users to log in, check their balance, deposit and withdraw funds, transfer money, and view their transaction history.
 
+<a name="features"></a>
+
 ### ✨ Features:
 * Multi-language Support: Users can choose between English, German, and Spanish for their interface language.
 * User Authentication: Secure login using a username and PIN.
@@ -56,7 +58,11 @@ Welcome to the payFriend ATM Application! This console-based application simulat
 * Logout and Exit Options: Users can securely log out or exit the application at any time.
 
 ---
+<a name="built-with"></a>
+
 ### 🛠️ Built With
+
+<a name="technology-stack"></a>
 
 Technology Stack
 
@@ -70,11 +76,15 @@ Technology Stack
 
 ---
 
-## 🚀 Getting Startet 
-
 <a name="getting-started"></a>
 
+## 🚀 Getting Startet 
+
+
+
 Before you start, make sure you have the following installed:
+
+<a name="prerequisites"></a>
 
 ### Prerequisites
 
@@ -84,6 +94,8 @@ Node.js (v14 or later)
 npm (Node package manager)
 
 ***
+<a name="installation"></a>
+
 ### 📂 Clone the project from GitHub and open it in VS Code
 
 Follow these steps to download and open the project:
@@ -109,6 +121,8 @@ Follow these steps to download and open the project:
    node main.js
 
 ---
+<a name="usage"></a>
+
 ## ⚙️ Usage
 
 Upon running, you will be prompted to choose your preferred language.
@@ -127,6 +141,8 @@ Feel free to modify the users array in the code to add more test users or change
 
 
 ---
+<a name="roadmap"></a>
+
 ## 🗺️ Roadmap
 
 - main.js: main entry point of the application. This file contains the core logic and initialization of the application, available in English for the user.
