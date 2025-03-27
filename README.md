@@ -1,95 +1,47 @@
-<!-- Improved compatibility of back to top link: See: https://github.com/othneildrew/Best-README-Template/pull/73 -->
-<a id="readme-top"></a>
-<!--
-*** Thanks for checking out the Best-README-Template. If you have a suggestion
-*** that would make this better, please fork the repo and create a pull request
-*** or simply open an issue with the tag "enhancement".
-*** Don't forget to give the project a star!
-*** Thanks again! Now go create something AMAZING! :D
--->
 
 
-
-<!-- PROJECT SHIELDS -->
-<!--
-*** I'm using markdown "reference style" links for readability.
-*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
-*** See the bottom of this document for the declaration of the reference variables
-*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
-*** https://www.markdownguide.org/basic-syntax/#reference-style-links
--->
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
-
-
-
-<!-- PROJECT LOGO -->
-<br />
-<div align="center">
-  <a href="https://github.com/othneildrew/Best-README-Template">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
-  </a>
-
-  <h3 align="center">Best-README-Template</h3>
-
-  <p align="center">
-    An awesome README template to jumpstart your projects!
-    <br />
-    <a href="https://github.com/othneildrew/Best-README-Template"><strong>Explore the docs »</strong></a>
-    <br />
-    <br />
-    <a href="https://github.com/othneildrew/Best-README-Template">View Demo</a>
-    ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues/new?labels=bug&template=bug-report---.md">Report Bug</a>
-    ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues/new?labels=enhancement&template=feature-request---.md">Request Feature</a>
-  </p>
-</div>
-
-
-
-<!-- TABLE OF CONTENTS -->
+<a name="readme-top"></a>
 <details>
   <summary>Table of Contents</summary>
   <ol>
     <li>
       <a href="#about-the-project">About The Project</a>
       <ul>
-        <li><a href="#built-with">Built With</a></li>
+        <li><a href="#features">Features</a></li>
       </ul>
     </li>
-    <li>
-      <a href="#getting-started">Getting Started</a>
+    <li><a href="#build-with">Build with</a>
       <ul>
+        <li><a href="#technology-stack">Technology Stack</a></li>
+      </ul>
+       </li>
+      <li>
+      <a href="#getting-started">Getting Startet</a>
+         <ul>
         <li><a href="#prerequisites">Prerequisites</a></li>
         <li><a href="#installation">Installation</a></li>
       </ul>
     </li>
     <li><a href="#usage">Usage</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
     <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
 </details>
 
 
-
-<!-- ABOUT THE PROJECT -->
-## About The Project
+---
+## 📌 About The Project
 
 payFriend ATM Application
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
-
 Welcome to the payFriend ATM Application! This console-based application simulates basic ATM functionalities, allowing users to log in, check their balance, deposit and withdraw funds, transfer money, and view their transaction history.
 
-Features:
+[Screencast.webm](https://github.com/user-attachments/assets/61cc79fb-8373-45f5-90eb-bf090c23a149)
+
+<a name="features"></a>
+
+### ✨ Features
 * Multi-language Support: Users can choose between English, German, and Spanish for their interface language.
 * User Authentication: Secure login using a username and PIN.
 * Account Management:
@@ -101,13 +53,14 @@ Features:
 * User-friendly Interface: Interactive and intuitive console-based navigation.
 * Logout and Exit Options: Users can securely log out or exit the application at any time.
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+---
 
+<a name="build-with"></a>
+## 🛠️ Built With
 
+<a name="technology-stack"></a>
 
-### Built With
-
-Technology Stack
+### Technology Stack 🖥️
 
 * JavaScript: Core language used for application logic.
 * readline-sync: For synchronous input from the user via the command line.
@@ -117,156 +70,95 @@ Technology Stack
 * nanospinner: For showing spinners during operations like login and money transfer.
 * timers/promises: For adding delays and simulating wait times.
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+---
+
+<a name="getting-started"></a>
+
+## 🚀 Getting Startet 
 
 
-
-<!-- GETTING STARTED -->
-## Getting Startet 
 
 Before you start, make sure you have the following installed:
 
-### Prerequisites
+<a name="prerequisites"></a>
+
+### Prerequisites 🏗️ 
 
 Before you start, make sure you have the following installed:
 
 Node.js (v14 or later)
 npm (Node package manager)
 
-### Installation
+***
+<a name="installation"></a>
 
-1. Clone the repository:
- git clone https://github.com/yourusername/payfriend-atm.git
- cd payfriend-atm
-2. Install the dependencies:
- npm install
-3. Run the application:
- node main.js
+### 📂 Clone the project from GitHub and open it in VS Code
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+Follow these steps to download and open the project:
 
-<!-- USAGE EXAMPLES -->
-## Usage
+1. Open the terminal and run the following command:
+
+    ```sh
+   git clone https://github.com/JulijanaUneva/ATM.git
+
+2. Enter the "ATM" directory
+   ```sh
+   cd ATM
+
+3. Navigate into the "code"
+    ```sh
+    cd code .
+
+5. Install the dependencies:
+    ```sh
+   npm install
+6. Run the application:
+   ```sh
+   node main.js
+
+---
+<a name="usage"></a>
+
+## ⚙️ Usage
 
 Upon running, you will be prompted to choose your preferred language.
 Follow the on-screen instructions to log in using your username and PIN.
 Once logged in, you can navigate through the main menu to perform various banking operations.
 
+User Accounts <br>
 
-_For more examples, please refer to the [Documentation](https://example.com)_
+The application comes with pre-configured user accounts for testing: <br>
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+-Username: Julijana Uneva, PIN: 1234 <br>
 
-User Accounts
-The application comes with pre-configured user accounts for testing:
+-Username: Markus Steck, PIN: 5678 <br>
 
-Username: Julijana Uneva, PIN: 1234
-Username: Markus Steck, PIN: 5678
 Feel free to modify the users array in the code to add more test users or change the existing ones.
 
 
-<!-- ROADMAP -->
-## Roadmap
+---
 
-- main.js: Main entry point of the application.
+<a name="roadmap"></a>
+
+## 🗺️ Roadmap
+
+- main.js: main entry point of the application. This file contains the core logic and initialization of the application, available in English for the user.
 - main-de.js, main-e.js: Language-specific modules for German and Spanish respectively.
-- users: An array containing user data including username, PIN, balance, and transaction history.
+- users: an array containing user data including username, PIN, balance, and transaction history.
+- transaction form: a form displaying transaction details in ASCII art.
 
-See the [open issues](https://github.com/othneildrew/Best-README-Template/issues) for a full list of proposed features (and known issues).
+<a name="contact"></a>
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+ ## 📫 How can you reach me
+
+### Julijana <img src="https://github.com/user-attachments/assets/6f751ed6-0e7c-4fb4-95ec-52f5d8ffbfe8" alt="programmer" style="width: 30px; height: 30px;" />
 
 
+ [![LinkedIn](https://img.shields.io/badge/-LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/julijana-uneva-b28a751b5)  [![E-Mail](https://img.shields.io/badge/-E--Mail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:julijana3uneva@gmail.com)   [![GitHub](https://img.shields.io/badge/-GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/JulijanaUneva)
+[julijana3uneva@gmail.com](mailto:julijana3uneva@gmail.com)
 
-<!-- CONTRIBUTING -->
-## Contributing
-
-Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
-
-Contributions are welcome! If you have any suggestions or improvements, feel free to create a pull request.
-
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-### Top contributors:
-
-<a href="https://github.com/othneildrew/Best-README-Template/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=othneildrew/Best-README-Template" alt="contrib.rocks image" />
-</a>
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+[Back to top](#readme-top)
 
 
 
-<!-- LICENSE -->
-## License
 
-Distributed under the MIT License. See `LICENSE.txt` for more information.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-<!-- CONTACT -->
-## Contact
-
-Your Name - [@your_](https://twitter.com/your_username) - julijana3uneva@gmail.com
-
-Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-<!-- ACKNOWLEDGMENTS -->
-## Acknowledgments
-
-Use this space to list resources you find helpful and would like to give credit to. I've included a few of my favorites to kick things off!
-
-* [Choose an Open Source License](https://choosealicense.com)
-* [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
-* [Malven's Flexbox Cheatsheet](https://flexbox.malven.co/)
-* [Malven's Grid Cheatsheet](https://grid.malven.co/)
-* [Img Shields](https://shields.io)
-* [GitHub Pages](https://pages.github.com)
-* [Font Awesome](https://fontawesome.com)
-* [React Icons](https://react-icons.github.io/react-icons/search)
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-<!-- MARKDOWN LINKS & IMAGES -->
-<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/othneildrew/Best-README-Template.svg?style=for-the-badge
-[contributors-url]: https://github.com/othneildrew/Best-README-Template/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/othneildrew/Best-README-Template.svg?style=for-the-badge
-[forks-url]: https://github.com/othneildrew/Best-README-Template/network/members
-[stars-shield]: https://img.shields.io/github/stars/othneildrew/Best-README-Template.svg?style=for-the-badge
-[stars-url]: https://github.com/othneildrew/Best-README-Template/stargazers
-[issues-shield]: https://img.shields.io/github/issues/othneildrew/Best-README-Template.svg?style=for-the-badge
-[issues-url]: https://github.com/othneildrew/Best-README-Template/issues
-[license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=for-the-badge
-[license-url]: https://github.com/othneildrew/Best-README-Template/blob/master/LICENSE.txt
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/othneildrew
-[product-screenshot]: images/screenshot.png
-[Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
-[Next-url]: https://nextjs.org/
-[React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
-[React-url]: https://reactjs.org/
-[Vue.js]: https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vuedotjs&logoColor=4FC08D
-[Vue-url]: https://vuejs.org/
-[Angular.io]: https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white
-[Angular-url]: https://angular.io/
-[Svelte.dev]: https://img.shields.io/badge/Svelte-4A4A55?style=for-the-badge&logo=svelte&logoColor=FF3E00
-[Svelte-url]: https://svelte.dev/
-[Laravel.com]: https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white
-[Laravel-url]: https://laravel.com
-[Bootstrap.com]: https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white
-[Bootstrap-url]: https://getbootstrap.com
-[JQuery.com]: https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white
-[JQuery-url]: https://jquery.com 
