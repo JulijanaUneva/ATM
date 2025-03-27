@@ -2,8 +2,8 @@
 
 <a name="readme-top"></a>
 
-<details style="font-size: 40px;">
-  <summary style="font-size: 40px;">Table of Contents</summary>
+<details style="font-size: 2.5em;">
+  <summary style="font-size: 2.5em;">Table of Contents</summary>
   <ol>
     <li>
       <a href="#about-the-project">About The Project</a>
