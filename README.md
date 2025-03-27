@@ -1,8 +1,10 @@
 
 
 <a name="readme-top"></a>
+
 <details>
-  <summary><span style="font-size: 4.5em;">Table of Contents</span></summary>
+  ## Table of Contents
+  <summary>Table of Contents</summary>
   <ol>
     <li>
       <a href="#about-the-project">About The Project</a>
