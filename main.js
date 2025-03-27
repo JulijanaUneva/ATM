@@ -13,7 +13,7 @@ import iniciarSesion from "./main-e.js";
 
 const users = [
   { username: "Julijana Uneva", pin: "1234", balance: 1000, transactions: [] },
-  { username: "Markus Steck", pin: "5678", balance: 500, transactions: [] },
+  { username: "Mark Steck", pin: "5678", balance: 500, transactions: [] },
 ];
 
 let currentUser = null;

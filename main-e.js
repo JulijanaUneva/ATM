@@ -17,7 +17,7 @@ const usuarios = [
     saldo: 1000,
     transacciones: [],
   },
-  { nombreUsuario: "Markus Steck", pin: "5678", saldo: 500, transacciones: [] },
+  { nombreUsuario: "Mark Steck", pin: "5678", saldo: 500, transacciones: [] },
 ];
 
 let usuarioActual = null;

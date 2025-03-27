@@ -17,7 +17,7 @@ const benutzer = [
     transaktionen: [],
   },
   {
-    benutzername: "Markus Steck",
+    benutzername: "Mark Steck",
     pin: "5678",
     guthaben: 500,
     transaktionen: [],
