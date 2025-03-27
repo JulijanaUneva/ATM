@@ -4,6 +4,11 @@
 
 <details style="font-size: 2.5em;">
   <summary style="font-size: 2.5em;">Table of Contents</summary>
+  <style>
+summary {
+    font-size: 2.5em;
+}
+</style>
   <ol>
     <li>
       <a href="#about-the-project">About The Project</a>
